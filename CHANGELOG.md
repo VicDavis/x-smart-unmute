@@ -2,11 +2,9 @@
 
 ## 4.1.0 - 2026-10-27
 
-First public release of the tested userscript.
+First public release of **Smart Unmute for X (Twitter)**.
 
-- Automatically unmute playing X/Twitter videos.
-- Keep X's own autoplay behavior (no forced `play()`).
-- Use 17% as the initial volume.
-- Remember user-selected volume between videos, reloads, and browser restarts.
-- Preserve manual mute for an individual video.
-- Store preferences locally without external requests.
+- Automatically enables sound on X (Twitter) videos.
+- Starts at 17% volume by default.
+- Remembers your preferred volume across videos, page reloads, and browser restarts.
+- Saves the volume preference locally, without tracking or external requests.
