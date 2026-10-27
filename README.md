@@ -13,7 +13,7 @@ Automatically enables sound on videos in X (Twitter) and remembers your preferre
 
 1. Install [Tampermonkey](https://www.tampermonkey.net/changelog.php?version=5.6.6242&ext=mfdh#v5.6.6239) from its official website.
 2. Allow user scripts in your browser, if this permission is not already enabled. In Chromium-based browsers:
-   - Open **Extensions → Manage extensions**.
+   - Open the extensions page: enter `chrome://extensions/` (Chrome) or `browser://extensions/` (Yandex Browser) in the address bar.
    - Select **Tampermonkey → Details**.
    - Find **Allow user scripts** and turn it on. If it is already on, leave it as is.
    - This is a **browser extension permission**, not a setting inside the Tampermonkey dashboard. Names and availability may vary by browser.
