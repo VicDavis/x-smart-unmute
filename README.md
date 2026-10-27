@@ -1,38 +1,27 @@
-# X Smart Unmute
+# Smart Unmute for X (Twitter)
 
-**Autoplay with sound. Your volume, your choice.**
-
-A lightweight [Tampermonkey](https://www.tampermonkey.net/) userscript for X (Twitter) that automatically unmutes playing videos, remembers your preferred volume, and still lets you mute individual videos.
+Automatically enables sound on videos in X (Twitter) and remembers your preferred volume.
 
 ## Features
 
-- **Automatic unmute:** Videos that X starts playing are unmuted automatically.
-- **17% initial volume:** The default is comfortable rather than the usual 100%.
-- **Remembered volume:** Change the volume on one video and use that level for subsequent videos, even after a page refresh or browser restart.
-- **Manual mute works:** Mute a specific video or turn its volume down without the script immediately overriding you.
-- **Native autoplay stays in control:** The script does not call `video.play()` or force videos to start.
-- **No external requests:** No analytics, accounts, or data transmission. Only your volume preference is saved locally in the site's `localStorage`.
+- **Auto Unmute:** Videos play with sound automatically.
+- **17% default volume:** No unexpected full-volume playback.
+- **Remember Volume:** Your chosen volume applies to subsequent videos and is saved across page reloads and browser restarts.
+- **Privacy:** No tracking or external requests. Your volume preference is stored locally.
 
-## Install
+## Installation
 
-1. Install **Tampermonkey** in your browser.
-2. **[Install X Smart Unmute](https://raw.githubusercontent.com/VicDavis/x-smart-unmute/main/x-smart-unmute.user.js)** (open the link in a browser with Tampermonkey enabled, then approve the installation).
-3. Open or refresh [x.com](https://x.com).
+1. Install [Tampermonkey](https://www.tampermonkey.net/changelog.php?version=5.6.6242&ext=mfdh#v5.6.6239) from its official website.
+2. Allow user scripts in your browser, if this permission is not already enabled. In Chromium-based browsers:
+   - Open **Extensions → Manage extensions**.
+   - Select **Tampermonkey → Details**.
+   - Find **Allow user scripts** and turn it on. If it is already on, leave it as is.
+   - This is a **browser extension permission**, not a setting inside the Tampermonkey dashboard. Names and availability may vary by browser.
+3. [Install Smart Unmute](https://raw.githubusercontent.com/VicDavis/x-smart-unmute/main/x-smart-unmute.user.js) and confirm installation in Tampermonkey.
+4. Open [X (Twitter)](https://x.com) or refresh an existing tab.
 
-**Yandex Browser:** In the Tampermonkey extension settings, enable **Allow user scripts** (`Разрешить пользовательские скрипты`).
-
-If you already use another Twitter/X auto-unmute extension or script, disable it to avoid conflicting volume controls.
-
-## How it works
-
-The script watches X video elements, unmutes them when playback starts, and remembers manual volume changes. It keeps track of manual mute separately for each video. The last positive volume is saved under `x-auto-unmute-volume-v4-1` in the site's `localStorage`, so it survives reloads.
-
-It runs only on `x.com` and `twitter.com` and needs no special Tampermonkey API permissions (`@grant none`).
-
-## Compatibility
-
-Tested with **Yandex Browser (Chromium)** and **Tampermonkey 5.6.6239**. Other Chromium-based browsers may work, but have not been verified here. Browser autoplay restrictions and future changes to X's video player can affect behavior. Volume preferences are local to each site origin and browser profile.
+Videos will now play with sound at your preferred volume.
 
 ## License
 
-[MIT](LICENSE). Not affiliated with X, Twitter, or Tampermonkey.
+[MIT License](LICENSE). Free and open source.
